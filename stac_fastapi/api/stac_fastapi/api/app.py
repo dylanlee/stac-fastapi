@@ -83,10 +83,10 @@ class StacApi:
         converter=update_openapi,
     )
     router: APIRouter = attr.ib(default=attr.Factory(APIRouter))
-    title: str = attr.ib(default="stac-fastapi")
-    api_version: str = attr.ib(default="0.1")
+    title: str = attr.ib(default="Water Prediction Node Public Catalog")
+    api_version: str = attr.ib(default="1.0.0")
     stac_version: str = attr.ib(default=STAC_VERSION)
-    description: str = attr.ib(default="stac-fastapi")
+    description: str = attr.ib(default="This is the public data catalog of the Water Prediction Node exposed as a spatiotemporal asset catalog (STAC) API.")
     search_get_request_model: Type[BaseSearchGetRequest] = attr.ib(
         default=BaseSearchGetRequest
     )
